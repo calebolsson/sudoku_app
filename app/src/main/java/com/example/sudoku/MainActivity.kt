@@ -1,5 +1,6 @@
 package com.example.sudoku
 
+import android.content.Context
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -7,11 +8,19 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.ui.Modifier
+import androidx.datastore.dataStore
 import androidx.navigation.compose.rememberNavController
+import com.example.sudoku.ui.StoredDataSerializer
 import com.example.sudoku.ui.main.NavigationGraph
 import com.example.sudoku.ui.theme.SudokuTheme
+import com.example.sudoku.ui.puzzle.Board
+
+val Context.dataStore by dataStore("stored-data.json",StoredDataSerializer)
 
 class MainActivity : ComponentActivity() {
+
+    //var puzzle = Board();
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
@@ -26,6 +35,12 @@ class MainActivity : ComponentActivity() {
                 }
             }
         }
+    }
+
+    private suspend fun saveGame(currentBoard: Board) {
+        dataStore.updateData { it.copy(
+            board = Board.cells
+        ) }
     }
 
     enum class Path(val string: String) {

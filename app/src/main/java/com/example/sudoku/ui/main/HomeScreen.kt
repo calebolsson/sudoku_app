@@ -53,7 +53,7 @@ fun HomeScreenContent(onClickContinue: () -> Unit, onClickImport: () -> Unit) {
                     modifier = Modifier.padding(100.dp)
                 )
                 Button(
-                    //enabled = puzzle != "Sudoku",
+                    enabled = true,
                     onClick = onClickContinue,
                     modifier = Modifier
                         .padding(5.dp)

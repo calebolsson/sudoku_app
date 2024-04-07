@@ -11,6 +11,7 @@ fun NavigationGraph(navController: NavHostController) {
     NavHost(navController = navController, startDestination = Path.HomeScreen.string) {
         composable(Path.HomeScreen.string) { HomeScreen(navController) }
         composable(Path.ImportScreen.string) { ImportImage(navController) }
+        composable(Path.GameScreen.string) { GameScreen(navController) }
         // Add more destinations similarly.
     }
 }

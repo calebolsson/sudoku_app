@@ -5,6 +5,7 @@ I have always felt that even my favorite sudoku apps fall just short of what I h
 This app is currently able to be opened, navigate between pages, and open your device's storage to access images. It also has the structure through which a puzzle may be saved. A page has been added to display the puzzle, but there is not yet any functionality behind the annotation tool scaffolding.
 
 [Sudoku App Demo](https://drive.google.com/file/d/1ooRO4jCkjlDk3I9RrYda8I3DaEFXZoRc/view?usp=sharing)
+[Sudoku App Demo 2](https://drive.google.com/file/d/11FyrjMkL0UvoiellW6KSdnNUsJhd53XS/view?usp=sharing)
 
 # Development Environment
 
